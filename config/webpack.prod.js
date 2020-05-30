@@ -1,5 +1,4 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const common = require('./webpack.common');
 
@@ -37,10 +36,6 @@ module.exports = merge.smart(common, {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './public/index.html',
-      filename: 'index.[contenthash].html'
-    }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash].css'
     })

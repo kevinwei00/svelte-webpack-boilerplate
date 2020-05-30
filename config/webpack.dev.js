@@ -1,4 +1,3 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const paths = require('./paths');
 const merge = require('webpack-merge');
 const common = require('./webpack.common');
@@ -32,10 +31,5 @@ module.exports = merge.smart(common, {
         ]
       }
     ]
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './public/index.html'
-    })
-  ]
+  }
 });
